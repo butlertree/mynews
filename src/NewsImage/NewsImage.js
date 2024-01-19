@@ -9,7 +9,7 @@ function NewsImage({ card, viewCardDetails }) {
       <img src={urlToImage} alt='News Image' className='news-image' />
       <h3 className='title'>{title}</h3>
       <p className='description'>{description}</p>
-      <p className='published-date'>{publishedAt}</p>
+      <p className='published-date'>Published Date: {publishedAt}</p>
     </div>
   );
 }

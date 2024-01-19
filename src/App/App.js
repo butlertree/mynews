@@ -56,18 +56,21 @@ function App() {
   return (
     <main className="App">
       <h1 className='bigHeading'>BotNews</h1>
-      <div className="category-selector">
-        <label>Select Category:</label>
-        <select onChange={(e) => setSelectedCategory(e.target.value)} value={selectedCategory}>
-          <option value="general">General</option>
-          <option value="sports">Sports</option>
-          <option value="business">Business</option>
-          <option value="science">Science</option>
-          <option value="technology">Technology</option>
-          <option value="health">Health</option>
-          <option value="entertainment">Entertainment</option>
-        </select>
-      </div>
+      {/* Conditionally render the category selector */}
+      {selectedCard === null && (
+        <div className="category-selector">
+          <label>Select Category:</label>
+          <select onChange={(e) => setSelectedCategory(e.target.value)} value={selectedCategory}>
+            <option value="general">General</option>
+            <option value="sports">Sports</option>
+            <option value="business">Business</option>
+            <option value="science">Science</option>
+            <option value="technology">Technology</option>
+            <option value="health">Health</option>
+            <option value="entertainment">Entertainment</option>
+          </select>
+        </div>
+      )}
       {selectedCard ? (
         <NewsDetail selectedCard={selectedCard} goBackToMain={goBackToMain}/>
       ) : (
@@ -77,5 +80,6 @@ function App() {
     </main>
   );
 }
+
 
 export default App;
