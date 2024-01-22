@@ -3,7 +3,12 @@ import './News.css';
 import NewsImage from '../NewsImage/NewsImage'
 
 //PASSING THE NEWS ARRA AND THE viewCardDetails function from App.js
-function News({news, viewCardDetails}){
+function News({news}){
+
+    // let { categoryName } = useParams();
+    // Use categoryName to determine what news to display
+    console.log("News in News Component: ", news);
+
 
 //check if a news article has the data I need  not null and not removed
 
@@ -31,24 +36,17 @@ function isValidArticle(article){
 
     return (
         <div className='news-container'>
-            {validNews.map((article) => (
-                <NewsImage
-                key={article.uuid}
-                card={article} //PASSING ARTICLE OBJECT AS PROP TO NewsImage.js
-                viewCardDetails={() => viewCardDetails(article)} //PASSING ARTICLE OBJECT AS PROP TO NewsImage.js
-
-
-                />
+        {validNews.map((article) => (
+            <NewsImage
+            key={article.id}
+            id={article.id}
+            card={article} //PASSING ARTICLE OBJECT AS PROP TO NewsImage.j
+            />
             ))}
-
-
-
-
         </div>
-
-    )
-
-}
+      );
+    }
 
 
 export default News;
+
