@@ -1,0 +1,31 @@
+.card-detail {
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  .card-detail img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .description {
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  .description a {
+    color: #CC0000;
+    text-decoration: none;
+  }
+  
+  .description a:hover {
+    text-decoration: underline;
+  }
+  
