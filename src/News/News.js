@@ -1,12 +1,12 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './News.css';
 import NewsImage from '../NewsImage/NewsImage'
 
 //PASSING THE NEWS ARRA AND THE viewCardDetails function from App.js
 function News({news}){
 
-    let { categoryName } = useParams();
+    // let { categoryName } = useParams();
     // Use categoryName to determine what news to display
 
 
@@ -37,23 +37,20 @@ function isValidArticle(article){
 
     return (
         <div className='news-container'>
-            {validNews.map((article) => (
-                <NewsImage
-                key={article.uuid}
-                card={article} //PASSING ARTICLE OBJECT AS PROP TO NewsImage.js
-
-
-                />
-            ))}
-
-
-
-
+          {validNews.map((article) => (
+            <Link 
+              key={article.id} 
+              to={{
+                pathname: `/news/${article.id}`,
+                state: { article } // Passing article data in the link state
+              }}
+            >
+              <NewsImage card={article} />
+            </Link>
+          ))}
         </div>
-
-    )
-
-}
+      );
+    }
 
 
 export default News;

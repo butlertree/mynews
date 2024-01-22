@@ -4,13 +4,15 @@ import './NewsDetail.css';
 
 function NewsDetail({ news }) {
   const { id } = useParams();
-  const selectedNews = news.find(article => article.id === id);
+  const article = news.find(article => article.id === id);
 
-  if (!selectedNews) {
+  if (!article) {
+    // If article not found in the news array, show a not found message
+    // Optionally, you could fetch the article data from the server here
     return <p>News article not found!</p>;
   }
 
-  const { title, description, urlToImage, url, content, publishedAt, source } = selectedNews;
+  const { title, description, urlToImage, url, content, publishedAt, source } = article;
   const { name } = source;
 
   return (
@@ -18,14 +20,13 @@ function NewsDetail({ news }) {
       <div className='card-content'>
         <h2 className='title'>{title}</h2>
         <img src={urlToImage} alt='News Image' className='news-image' />
-       </div>
-       <div className='description'>
+      </div>
+      <div className='description'>
         <p>{content}</p>
         <p>Source: {name}</p> 
         <p>Published Date: {publishedAt}</p>
         <a href={url}>Visit News Site</a>
-       </div>
-       
+      </div>
     </div>
   );
 }

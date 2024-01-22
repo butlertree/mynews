@@ -65,7 +65,9 @@ function App() {
  
 
   const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
+    const newCategory = e.target.value;
+    setSelectedCategory(newCategory);
+    navigate(`/category/${newCategory}`); // Navigate to the category URL
   };
 
 
