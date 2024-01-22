@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './News.css';
 import NewsImage from '../NewsImage/NewsImage'
 
@@ -8,7 +7,7 @@ function News({news}){
 
     // let { categoryName } = useParams();
     // Use categoryName to determine what news to display
-
+    console.log("News in News Component: ", news);
 
 
 //check if a news article has the data I need  not null and not removed
@@ -37,20 +36,17 @@ function isValidArticle(article){
 
     return (
         <div className='news-container'>
-          {validNews.map((article) => (
-            <Link 
-              key={article.id} 
-              to={{
-                pathname: `/news/${article.id}`,
-                state: { article } // Passing article data in the link state
-              }}
-            >
-              <NewsImage card={article} />
-            </Link>
-          ))}
+        {validNews.map((article) => (
+            <NewsImage
+            key={article.id}
+            id={article.id}
+            card={article} //PASSING ARTICLE OBJECT AS PROP TO NewsImage.j
+            />
+            ))}
         </div>
       );
     }
 
 
 export default News;
+

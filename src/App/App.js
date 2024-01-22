@@ -16,11 +16,29 @@ import technologyData from '../data/technology';
  
 
 function App() {
-  const [news, setNews] = useState([]);
+
+
+  const [generalNews, setGeneralNews] = useState([]);
+  const [sportsNews, setSportsNews] = useState([]);
+  const [businessNews, setBusinessNews] = useState([]);
+  const [healthNews, setHealthNews] = useState([]);
+  const [scienceNews, setScienceNews] = useState([]);
+  const [entertainmentNews, setEntertainmentNews] = useState([]);
+  const [technologyNews, setTechnologyNews] = useState([]);
+
+  // const [news, setNews] = useState([]);
   const [error, setError] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('general'); // Default to general category
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState('false')
+
+
+
+  const handleCategoryChange = (e) => {
+    const newCategory = e.target.value;
+    setSelectedCategory(newCategory);
+    navigate(`/category/${newCategory}`); // This should change the URL.
+  };
 
 
   const getCategoryData = (category) => {
@@ -33,11 +51,12 @@ function App() {
         return response.json();
       })
       .then(data => {
+        console.log("Fetched Data for", category, ":", data);
         // Ensure that the response contains the articles array
         if (!data.articles) {
           throw new Error('Invalid data format');
         }
-        return data.articles;
+        return data.articles.map(article => ({ ...article, id: uuidv4() }));
       });
   };
   
@@ -45,30 +64,36 @@ function App() {
   useEffect(() => {
     setIsLoading(true);
     getCategoryData(selectedCategory)
-      .then(articles => {
-        const newsWithIds = articles.map(article => ({
-          ...article,
-          id: uuidv4(),
-        }));
-        setNews(newsWithIds);
+      .then(data => {
+        switch (selectedCategory) {
+          case 'sports':
+            setSportsNews(data);
+            break;
+          case 'business':
+            setBusinessNews(data);
+            break;
+          case 'entertainment':
+            setEntertainmentNews(data);
+            break;
+          case 'health':
+            setHealthNews(data);
+            break;
+          case 'technology':
+            setTechnologyNews(data);
+            break;
+          case 'science':
+            setScienceNews(data);
+            break;
+          default:
+            setGeneralNews(data);
+            console.log("General News: ", data);
+        }
       })
-      .catch(error => {
-        console.error("Error fetching news:", error);
-        setError(error.message);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+      .finally(() => setIsLoading(false));
   }, [selectedCategory]);
-  
+
 
  
-
-  const handleCategoryChange = (e) => {
-    const newCategory = e.target.value;
-    setSelectedCategory(newCategory);
-    navigate(`/category/${newCategory}`); // Navigate to the category URL
-  };
 
 
   return (
@@ -86,10 +111,20 @@ function App() {
           </select>
         </header>
 
+        {isLoading && <p>Loading...</p>}
+        {error && <p>Error: {error}</p>}
+
         <Routes>
-          <Route path="/" element={<News news={news} />} />
-          <Route path="/category/:categoryName" element={<News news={news} />} />
-          <Route path="/news/:id" element={<NewsDetail news={news} />} />
+          <Route path="/" element={<News news={generalNews} />} />
+          <Route path="/category/general" element={<News news={generalNews} />} />
+          <Route path="/category/sports" element={<News news={sportsNews} />} />
+          <Route path="/category/business" element={<News news={businessNews} />} />
+          <Route path="/category/science" element={<News news={scienceNews} />} />
+          <Route path="/category/health" element={<News news={healthNews} />} />
+          <Route path="/category/technology" element={<News news={technologyNews} />} />
+          <Route path="/category/entertainment" element={<News news={entertainmentNews} />} />
+          
+          <Route path="/news/:id" element={<NewsDetail news={[...generalNews, ...sportsNews,...businessNews, ...scienceNews, ...healthNews, ...technologyNews, ...entertainmentNews]} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
