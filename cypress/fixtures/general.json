@@ -1,0 +1,100 @@
+{
+  "status": "ok",
+  "totalResults": 34,
+  "articles": [
+  {
+  "source": {
+  "id": null,
+  "name": "BBC News"
+  },
+  "author": null,
+  "title": "Trump looks on as E Jean Carroll testifies Trump shattered her reputation - BBC.com",
+  "description": "The ex-president looks on as his rape accuser tells a court he branded her \"a fraud and a whack job\".",
+  "url": "https://www.bbc.com/news/world-us-canada-68009461",
+  "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/05EB/production/_132351510_c09127023cff7280b9010db7f0c47f127c578492.jpg",
+  "publishedAt": "2024-01-17T18:16:00Z",
+  "content": "E Jean Carroll looks on during opening arguments on Tuesday\r\nE Jean Carroll has testified that Donald Trump \"shattered\" her reputation after she accused him of sexually assaulting her in the 1990s.\r\n… [+4748 chars]"
+  },
+  {
+  "source": {
+  "id": "nbc-news",
+  "name": "NBC News"
+  },
+  "author": "Abigail Williams, Marlene Lenthang",
+  "title": "Blinken switches planes in Zurich after first Boeing aircraft is grounded over an oxygen leak - NBC News",
+  "description": "Secretary of State Antony Blinken switched planes in Zurich, Switzerland, on Wednesday after his original plane was grounded.",
+  "url": "https://www.nbcnews.com/politics/politics-news/blinken-switches-planes-zurich-first-boeing-aircraft-grounded-oxygen-l-rcna134320",
+  "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2024-01/240117-antony-blinken-ew-1143a-6004fa.jpg",
+  "publishedAt": "2024-01-17T18:10:18Z",
+  "content": "Secretary of State Antony Blinken switched planes in Zurich, Switzerland, on Wednesday after his original plane was grounded. \r\nHe first boarded a Boeing C-40, which is part of the U.S. military serv… [+1388 chars]"
+  },
+  {
+  "source": {
+  "id": "nbc-news",
+  "name": "NBC News"
+  },
+  "author": "Lawrence Hurley",
+  "title": "Conservative Supreme Court justices consider weakening federal agency power - NBC News",
+  "description": "The Supreme Court will hear arguments on a precedent that courts defer to federal agencies in interpreting ambiguous laws, which the right says results in regulatory overreach by the government.",
+  "url": "https://www.nbcnews.com/politics/supreme-court/supreme-court-weighs-conservative-plea-weaken-federal-agencies-rcna133561",
+  "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2024-01/240105-supreme-court-justices-al-0918-0895ee.jpg",
+  "publishedAt": "2024-01-17T18:07:07Z",
+  "content": "WASHINGTON A 40-year-old Supreme Court precedent that over the years has become a bugbear on the right because it is viewed as bolstering the power of federal agencies came under tough scrutiny on We… [+6855 chars]"
+  },
+  {
+  "source": {
+  "id": null,
+  "name": "9to5google.com"
+  },
+  "author": "Abner Li",
+  "title": "Google 'Circle to Search' coming to Pixel 8 & S24 with awkward launch shortcut - 9to5Google",
+  "description": "Google is following \"Now on Tap\" with a new \"Circle to Search\" feature debuting on the Pixel 8 and Samsung Galaxy S24 series...",
+  "url": "https://9to5google.com/2024/01/17/circle-to-search-pixel-8/",
+  "urlToImage": "https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2024/01/pixel-8-circle-to-search.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+  "publishedAt": "2024-01-17T18:03:00Z",
+  "content": "Google is following “Now on Tap,” “What’s on my screen?” in Assistant, and later “Search screen” with a new “Circle to Search” feature debuting on the Pixel 8 and Samsung Galaxy S24 series. \r\nCircle … [+1695 chars]"
+  },
+  {
+  "source": {
+  "id": null,
+  "name": "NPR"
+  },
+  "author": "",
+  "title": "Palestinians displaced by Israel-Hamas war fear forced resettlement outside Gaza - NPR",
+  "description": "In the past three months, 2 million Palestinians have been internally displaced by war. Some far-right Israeli officials want them to leave Gaza altogether — evoking the trauma of past displacement.",
+  "url": "https://www.npr.org/2024/01/17/1224889340/gaza-palestinian-displacement-israel-war",
+  "urlToImage": "https://media.npr.org/assets/img/2024/01/16/displaced_lauren_npr_ayman-oghanna005_wide-873abbe044ce853bcb8c910fe141ba14b74f3fe7-s1400-c100.jpg",
+  "publishedAt": "2024-01-17T17:44:24Z",
+  "content": "Sakher Abu Dahouk in front of the razor wire of the separation barrier that surrounds his land in Beit Hanina Al-Balad in the Israeli-occupied West Bank. His extended family has moved several times s… [+8891 chars]"
+  },
+  {
+  "source": {
+  "id": "nbc-news",
+  "name": "NBC News"
+  },
+  "author": "Henry Austin, Liam Woods",
+  "title": "Britain's King Charles III to undergo hospital treatment for an enlarged prostate - NBC News",
+  "description": "Britain’s King Charles III will undergo a “corrective procedure” in the hospital next week after seeking treatment for an enlarged prostate, Buckingham Palace said Wednesday.",
+  "url": "https://www.nbcnews.com/news/world/king-charles-iii-hospital-treatment-enlarged-prostate-rcna134297",
+  "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2024-01/20240117-king-charles-sj-1042-eacdde.jpg",
+  "publishedAt": "2024-01-17T16:54:02Z",
+  "content": "LONDON  Britains King Charles III will undergo a corrective procedure in the hospital next week after seeking treatment for an enlarged prostate, Buckingham Palace said Wednesday. \r\nIn common with th… [+1908 chars]"
+  },
+  {
+  "source": {
+  "id": null,
+  "name": "Variety"
+  },
+  "author": "Ethan Shanfeld",
+  "title": "Pauly Shore to Play Richard Simmons in New Biopic - Variety",
+  "description": "Pauly Shore is getting ready to sweat to the oldies, as the actor and comedian will play fitness icon Richard Simmons in a new biopic.",
+  "url": "https://variety.com/2024/film/news/richard-simmons-movie-pauly-shore-1235875359/",
+  "urlToImage": "https://variety.com/wp-content/uploads/2024/01/Screen-Shot-2024-01-17-at-11.14.16-AM.png?w=1000&h=563&crop=1",
+  "publishedAt": "2024-01-17T16:32:00Z",
+  "content": "Pauly Shore is getting ready to sweat to the oldies, as the actor and comedian will play fitness icon Richard Simmons in a new biopic.\r\nThe film is currently in development at Warner Bros. subsidiary… [+2871 chars]"
+  }
+]
+}
+
+
+
