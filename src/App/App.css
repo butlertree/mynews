@@ -11,10 +11,6 @@ a {
 }
 
 
-
-
-
-
 header {
   background-color: #CC0000; /* CNN Red */
   color: white;
@@ -37,4 +33,19 @@ header select {
 
 .buttons-container {
   margin-right: 20px;
+}
+
+
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 15px;
+  }
+ 
+  header h2 {
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
 }
