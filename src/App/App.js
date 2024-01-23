@@ -68,7 +68,7 @@ function App() {
       });
   };
 
-     // Function to check if the category data is empty returns true if not yet loaded
+     // Function to check if the category data is empty returns true if not yet loaded helps helper function!!!
 const isCategoryEmpty = (category) => {
   switch (category) {
     case 'sports': return sportsNews.length === 0;
@@ -145,11 +145,11 @@ useEffect(() => {
   return (
       <main className="App">
         <header>
-          <h1>Your News</h1>
+          <h1>BNN</h1>
           {getCurrentCategory() && (
           <h2>{getCurrentCategory().charAt(0).toUpperCase() + getCurrentCategory().slice(1)} News</h2>)}
           <nav className="buttons-container">
-          <Link to="/">Back to Main</Link> 
+          <Link to="/">Main Page</Link> 
           </nav>
           <select onChange={handleCategoryChange} value={selectedCategory}>
             <option value="general">General</option>
