@@ -4,9 +4,9 @@ describe('On Page Load', () => {
     // Intercept the API request for the general category
     cy.intercept('GET', `https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=f1f66cfc65f944e7b26801f4632f16f3`, {
       statusCode: 200,
-      fixture: 'general.json', // assuming you have a fixture for the general category
+      fixture: 'general.json', 
     }).as('apiRequest');
-    // Visit the root path
+    // Visit the path
     cy.visit('localhost:3000/');
     // Wait for the API request to complete
     cy.wait('@apiRequest');
@@ -37,7 +37,6 @@ describe('On Page Load', () => {
       });
     });
   
-
 // ERROR HANDELING 300
  describe('Error Handling', () => {
   it('should show error messaging to a user', () => {
@@ -49,7 +48,6 @@ describe('On Page Load', () => {
     cy.get('h2').should('contain.text', 'Something went wrong, please try again later!');
   });
 });
-
 
 //ERROR HANDELING 404
 describe('Error Handling', () => {
@@ -65,14 +63,13 @@ describe('Error Handling', () => {
   });
 });
 
-
-
-//Paths 
+//PATHS
 describe('Category Navigation', () => {
+  //All of the categories
   const categories = ['sports', 'business', 'health', 'science', 'technology', 'entertainment'];
 
   beforeEach(() => {
-    // Intercept for the initial page load (general category by default)
+    // Intercept for the initial page load general by default
     cy.intercept('GET', 'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=f1f66cfc65f944e7b26801f4632f16f3', {
       statusCode: 200,
       fixture: 'general.json',
@@ -99,7 +96,7 @@ describe('Category Navigation', () => {
 
 
       if (category === 'sports') {
-        // Add assertions specific to the 'business' category
+        // Add assertions 
         cy.get('.news-container').children().should('have.length', 5);
         
         cy.get('img[src="https://cdn.theathletic.com/app/uploads/2024/01/17103500/warriors-dejan-milojevic-1-scaled.jpg"]').should('be.visible');
@@ -113,9 +110,8 @@ describe('Category Navigation', () => {
         cy.get('.news-container').last().should('contain', "2024-01-17T17:33:00Z");
       }
 
-
       if (category === 'business') {
-        // Add assertions specific to the 'business' category
+        // Add assertions 
         cy.get('.news-container').children().should('have.length', 1);
         
         cy.get('img[src="https://image.cnbcfm.com/api/v1/image/107173255-1672767515253-gettyimages-1245963875-US_STOCKS_2023.jpeg?v=1705442968&w=1920&h=1080"]').should('be.visible');
@@ -129,9 +125,8 @@ describe('Category Navigation', () => {
         cy.get('.news-container').last().should('contain', "2024-01-17T18:24:00Z");
       }
 
-
       if (category === 'health') {
-        // Add assertions specific to the 'business' category
+        // Add assertions 
         cy.get('.news-container').children().should('have.length', 4);
         
         cy.get('img[src="https://nypost.com/wp-content/uploads/sites/2/2024/01/sick.gif?w=1024"]').should('be.visible');
@@ -145,10 +140,8 @@ describe('Category Navigation', () => {
         cy.get('.news-container').last().should('contain', "2024-01-17T14:21:25Z");
       }
 
-
-
       if (category === 'science') {
-        // Add assertions specific to the 'business' category
+        // Add assertions 
         cy.get('.news-container').children().should('have.length', 7);
         
         cy.get('img[src="https://cdn.vox-cdn.com/thumbor/BHrJ4HZXKGdz0axKQZ4qy8IVUt4=/307x232:1807x1017/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/25230296/stsci_01gqqfcdz3j7arc9f8qdxe0f7z__1_.jpg"]').should('be.visible');
@@ -162,10 +155,8 @@ describe('Category Navigation', () => {
         cy.get('.news-container').last().should('contain', "2024-01-17T12:26:18Z");
       }
 
-
-
       if (category === 'technology') {
-        // Add assertions specific to the 'business' category
+        // Add assertions 
         cy.get('.news-container').children().should('have.length', 5);
         
         cy.get('img[src="https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2024/01/pixel-8-circle-to-search.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1"]').should('be.visible');
@@ -179,9 +170,8 @@ describe('Category Navigation', () => {
         cy.get('.news-container').last().should('contain', "2024-01-17T16:03:56Z");
       }
 
-
       if (category === 'entertainment') {
-        // Add assertions specific to the 'business' category
+        // Add assertions 
         cy.get('.news-container').children().should('have.length', 2);
         
         cy.get('img[src="https://variety.com/wp-content/uploads/2024/01/SMS_005.png?w=1000&h=563&crop=1"]').should('be.visible');
@@ -194,8 +184,33 @@ describe('Category Navigation', () => {
         cy.get('.news-container').last().should('contain', "Pauly Shore is getting ready to sweat to the oldies, as the actor and comedian will play fitness icon Richard Simmons in a new biopic.");
         cy.get('.news-container').last().should('contain', "2024-01-17T16:32:00Z");
       }
-
-
     });
+  });
+});
+
+//DETAIL PAGE
+describe('Detail Page Navigation', () => {
+  beforeEach(() => {
+    // Intercept the API request for the general category
+    cy.intercept('GET', `https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=f1f66cfc65f944e7b26801f4632f16f3`, {
+      statusCode: 200,
+      fixture: 'general.json', 
+    }).as('apiRequest');
+    // Visit the path
+    cy.visit('localhost:3000/');
+    // Wait for the API request to complete
+    cy.wait('@apiRequest');
+  });
+
+  it('should navigate to the detail page of the first news item and display correct information', () => {
+    // Click on the first news item
+    cy.get('.news-container').children().first().click();
+
+    // Assertions to verify the details 
+    cy.get('.card-detail').should('exist').and('contain', 'Trump looks on as E Jean Carroll testifies Trump shattered her reputation - BBC.com');
+    cy.get('.news-image').should('exist').and('have.attr', 'src').and('include', 'https://ichef.bbci.co.uk/news/1024/branded_news/05EB/production/_132351510_c09127023cff7280b9010db7f0c47f127c578492.jpg');
+    cy.get('.card-detail').should('exist').and('contain', 'E Jean Carroll looks on during opening arguments on Tuesday\r\nE Jean Carroll has testified that Donald Trump \"shattered\" her reputation after she accused him of sexually assaulting her in the 1990s.\r\n… [+4748 chars]');
+    cy.get('.description').should('exist').and('contain', '2024-01-17T18:16:00Z');
+    cy.get('.description a').should('exist').and('have.attr', 'href').and('include', 'https://www.bbc.com/news/world-us-canada-68009461');
   });
 });
