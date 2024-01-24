@@ -8,7 +8,6 @@ function NewsDetail({ news }) {
 
   if (!article) {
     // If article not found in the news array, show a not found message
-    // Optionally, you could fetch the article data from the server here
 
     return (
     <div className="news-not-found">
@@ -17,7 +16,7 @@ function NewsDetail({ news }) {
     )
   }
 
-  const { title, description, urlToImage, url, content, publishedAt, source } = article;
+  const { title, urlToImage, url, content, publishedAt, source } = article;
   const { name } = source;
 
   return (

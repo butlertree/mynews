@@ -6,13 +6,7 @@ import { Routes, Route, Link, useNavigate} from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { useLocation } from 'react-router-dom';
 import NotFound from '../NotFound/NotFound';
-import sportsData from '../data/sports'; 
-import businessData from '../data/business'; 
-import entertainmentData from '../data/entertain'; 
-import generalData from '../data/general'; 
-import healthData from '../data/health'; 
-import scienceData from '../data/science'; 
-import technologyData from '../data/technology'; 
+
 
  
 
@@ -20,7 +14,6 @@ function App() {
 
   const navigate = useNavigate();
   const location = useLocation()
-
 
    // Function to add category to heading based on url
    const getCurrentCategory = () => {
@@ -35,7 +28,7 @@ function App() {
     return 'general'; // Default category
   };
   
-
+//Category arrays
   const [generalNews, setGeneralNews] = useState([]);
   const [sportsNews, setSportsNews] = useState([]);
   const [businessNews, setBusinessNews] = useState([]);
@@ -59,7 +52,6 @@ function App() {
         return response.json();
       })
       .then(data => {
-        console.log("Fetched Data for", category, ":", data);
         // Ensure that the response contains the articles array
         if (!data.articles) {
           throw new Error('Invalid data format');
