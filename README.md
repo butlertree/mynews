@@ -38,6 +38,9 @@ This project was completed during the intermisson between Mod3 and Mod4 of the F
 3. Run the React app: Run the following command in the cloned repository directory: `npm start`
 4. Open the app in your web browser by navigating to http://localhost:3000
 
+## NewsApi Link:
+(https://newsapi.org/)
+
 ## 📚 Learning Goals
 - Gain competency utalizing public api
 - Use React fundamentals
