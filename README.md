@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# My News
+<div align="center">
+  
+BNN (fake news network)
+![Tests](https://badgen.net/badge/tests/passing/green?icon=github)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 💾 Technologies Used
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![React](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+![Cypress](https://img.shields.io/badge/-cypress-%238D6748?style=for-the-badge&logo=cypress&logoColor=white)
 
-## Available Scripts
 
-In the project directory, you can run:
+## 👨‍💻  Collaborators
+[Chris Butler](https://github.com/butlertree)
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 💭 Abstract
+My News Navigator is a straightforward and efficient front-end application designed to keep users informed about the latest news across various categories such as sports, business, health, science, technology, and entertainment. Built using React, the app offers a clean and user-friendly interface, allowing for easy browsing and access to a wide range of news articles.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Emphasizing functionality and a smooth user experience, My News Navigator has been rigorously tested with Cypress to ensure reliability and seamless performance. This focus on quality testing guarantees that users have a hassle-free experience while staying updated with current events. News Navigator is your go-to app for quick, easy access to the news that matters to you.
 
-### `npm test`
+## 📝  Context
+This project was completed during the intermisson between Mod3 and Mod4 of the Front End development program at Turing School of Software & Design. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Link: 
+[Live Github Link]
 
-### `npm run build`
+![Screenshot](<src/images/Screenshot 2024-01-13 at 4.20.40 PM.png>)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🔌 Server Setup
+1. Clone the repository: Open a terminal window. Navigate to the directory where you want to clone the repository: `git clone (copied link)`
+2. Install the dependencies: Run the following command in the cloned repository directory: `npm install`
+3. Run the React app: Run the following command in the cloned repository directory: `npm start`
+4. Open the app in your web browser by navigating to http://localhost:3000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📚 Learning Goals
+- Gain competency utalizing public api
+- Use React fundamentals
+- Test React components & asynchronous JS with cypress
+- Practice refactoring
+- Create a multi-page UX using Router
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🥇 Wins
+⭐ Successfully use React and React Router
+⭐ Successfully implement cypress testing
+⭐ Successfully navigating a public api and accessing its data for the application.  
 
-### `npm run eject`
+## 🚧 Challenges
+❗ It was more challenging working with a public api that restricted my my requests.  Also, the data was at times incomplete or missing alltogether requiring some filtering and design choices.  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
