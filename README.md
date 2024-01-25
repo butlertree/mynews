@@ -30,7 +30,7 @@ This project was completed during the intermisson between Mod3 and Mod4 of the F
 ## Link: 
 [Live Github Link]
 
-![Screenshot](<src/images/Screenshot 2024-01-13 at 4.20.40 PM.png>)
+![Screenshot](<src/images/Screenshot 2024-01-25 at 10.08.10 PM.png>)
 
 ## 🔌 Server Setup
 1. Clone the repository: Open a terminal window. Navigate to the directory where you want to clone the repository: `git clone (copied link)`
